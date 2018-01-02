@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="ie=edge" http-equiv="x-ua-compatible">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+	<title>Hex Extractor</title>
+</head>
+<body>
+    <textarea id="input"></textarea>
+    <button onclick="extract()" type="button">DO IT</button>
+
+    <script>
+        function extract() {
+        const everything = document.getElementById('input').value;
+        const regexp = /#([A-F0-9]{6})|#([A-F0-9]{3})/gi
+        const cleansed = everything.match(regexp);
+        console.log(cleansed);
+        }
+
+    </script>
+
+</body>
+</html>
