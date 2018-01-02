@@ -4,8 +4,13 @@ function extract() {
     const unique = [...new Set(ripped)];
     for (const hexValue in unique) {
         const newElement = document.createElement('div');
-        newElement.id = unique[hexValue]; newElement.className = 'color'; newElement.style.backgroundColor= unique[hexValue];
+        newElement.id = unique[hexValue];
+        newElement.className = 'color'; 
+        if (tinycolor(unique[hexValue]).isDark()) {
+            newElement.style.color = '#F2F2F2';
+        }
+        newElement.style.backgroundColor = unique[hexValue];
         newElement.innerHTML = unique[hexValue];
         document.getElementById('color-container').appendChild(newElement);
-        }
     }
+}
