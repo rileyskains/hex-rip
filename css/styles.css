@@ -3,6 +3,7 @@ html {
 	line-height: 1.15;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
+	margin: 0;
 }
 body {
     margin: 0;
@@ -159,7 +160,30 @@ template {
 }
 /* End Normalize */
 
+#color-container {
+	width: 90vw;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+
 #input {
+	display: block;
     width: 70vw;
-    height: 150px;
+	height: 150px;
+	margin: 0 auto;
+	padding: 0;
+}
+button {
+	display: block;
+	margin: 0 auto;
+}
+.color {
+	width: 12.5vw;
+	height: 12.5vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.25em;
 }
