@@ -1,4 +1,4 @@
-/* Begin Normalize */
+Begin Normalize
 html {
 	line-height: 1.15;
 	-ms-text-size-adjust: 100%;
@@ -160,26 +160,38 @@ template {
 }
 /* End Normalize */
 
+body {
+	display: inline-block;
+	width: 100%;
+}
+h1 {
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	font-size: 3em;
+}
 #color-container {
-	width: 90vw;
-	display: flex;
+	width: 100%;
+	display: inline-flex;
 	flex-wrap: wrap;
 	margin: 0 auto;
+	margin-top: 50px;
+	padding: 0;
 }
 #input {
 	display: block;
-    width: 70vw;
+    width: 70%;
 	height: 150px;
 	margin: 0 auto;
 	padding: 0;
 }
-button {
+#extract-button {
 	display: block;
 	margin: 0 auto;
+	margin-top: 25px;
 }
 .color {
-	width: 12.5vw;
-	height: 12.5vh;
+	width: 12.5%;
+	height: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -188,5 +200,5 @@ button {
 	color: #212121;
 	margin: 0;
 	padding: 0;
-	border: none;
+	border: 0;
 }
