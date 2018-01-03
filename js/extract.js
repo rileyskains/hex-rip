@@ -16,9 +16,10 @@ function extract() {
         brightness[x] = combined[x].brightness;
     }
     for (const hexValue in unique) {
-        const newElement = document.createElement('div');
+        const newElement = document.createElement('button');
         newElement.id = unique[hexValue];
         newElement.className = 'color'; 
+        newElement.setAttribute('data-clipboard-text', unique[hexValue]);
         if (tinycolor(unique[hexValue]).isDark()) {
             newElement.style.color = '#F2F2F2';
         }
