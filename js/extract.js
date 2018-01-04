@@ -6,8 +6,9 @@ function extract() {
             extract();
         });
     }
-    const input = document.getElementById('input').value.toUpperCase();
-    const ripped = input.match(/#([A-F0-9]{6})|#([A-F0-9]{3})/gi);
+    const dirtyInput = document.getElementById('input').value.toUpperCase();
+    const cleanInput = DOMPurify.sanitize(dirtyInput);
+    const ripped = cleanInput.match(/#([A-F0-9]{6})|#([A-F0-9]{3})/gi);
     const unique = [...new Set(ripped)];
     const brightness = [];
     const combined = [];
