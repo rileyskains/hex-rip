@@ -1,4 +1,5 @@
 function extract() {
+    document.getElementById('empty-eventually').remove();
     if (document.getElementById('input').value.startsWith('http') == true) {
         getCORS(document.getElementById('input').value, function(request){
             var response = request.currentTarget.response || request.target.responseText;
