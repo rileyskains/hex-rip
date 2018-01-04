@@ -27,6 +27,7 @@ function extract() {
         newElement.id = unique[hexValue];
         newElement.className = 'color'; 
         newElement.setAttribute('data-clipboard-text', unique[hexValue]);
+        newElement.setAttribute('title', `Copy ${unique[hexValue]} to clipboard`);
         if (tinycolor(unique[hexValue]).isDark()) {
             newElement.style.color = '#F2F2F2';
         }
