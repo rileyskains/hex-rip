@@ -10,18 +10,28 @@
 </head>
 <body>
     <h1>Hex Rip</h1>
+
+
     <textarea id="input"></textarea>
 
     <button id="extract-button" onclick="extract()" type="button">Extract</button>
 
-    <div id="color-container">
+    <div id="color-container"></div>
 
-    </div>
     <script src="js/tinycolor.js"></script>
     <script src="js/extract.js"></script>
     <script src="js/clipboard.js"></script>
     <script>
     var clip = new Clipboard('.color');
+        
+    function getCORS(url, success) {
+    var xhr = new XMLHttpRequest();
+    if (!('withCredentials' in xhr)) xhr = new XDomainRequest(); // fix IE8/9
+    xhr.open('GET', url);
+    xhr.onload = success;
+    xhr.send();
+    return xhr;
+}
     </script>
 </body>
 </html>

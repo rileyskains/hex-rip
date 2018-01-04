@@ -1,4 +1,11 @@
 function extract() {
+    if (document.getElementById('input').value.startsWith('http') == true) {
+        getCORS(document.getElementById('input').value, function(request){
+            var response = request.currentTarget.response || request.target.responseText;
+            document.getElementById('input').value = response;
+            extract();
+        });
+    }
     const input = document.getElementById('input').value.toUpperCase();
     const ripped = input.match(/#([A-F0-9]{6})|#([A-F0-9]{3})/gi);
     const unique = [...new Set(ripped)];
