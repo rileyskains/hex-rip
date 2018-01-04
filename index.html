@@ -30,6 +30,8 @@ Once you're done, click the Extract button and let the JavaScript do the rest!">
     <script src="js/extract.js"></script>
     <script src="js/clipboard.js"></script>
     <script>
+    document.onload = document.getElementById('input').value = '';
+    
     var clip = new Clipboard('.color');
         
     function getCORS(url, success) {
