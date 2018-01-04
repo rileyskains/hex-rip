@@ -6,22 +6,21 @@
 	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <title>Hex-Rip</title>
     <link href="css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
 	<link href="images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
 	<link href="images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
 </head>
 <body>
-    <h1>Hex-Rip</h1>
+<section class="hero-area">
+    <h1><span class="title-purple">Hex</span>Rip</h1>
+    <h2>Hex Color Ripper</h2>
 
-    <textarea id="input" placeholder=
-"Hello! 
-Copy the contents of a text file that may contain hex color values and paste it here. 
-Or paste in a URL to a CSS file or some other file. 
-(URL option will only work if they have CORS enabled.) 
-Once you're done, click the Extract button and let the JavaScript do the rest!"></textarea>
+    <textarea id="input" placeholder="https://example.com/your-file.css, .js, .json, .html or whatever. Alternatively, just paste the text in here. If URL doesn't work, it isn't supported."></textarea>
 
     <button id="extract-button" onclick="extract()" type="button">Extract</button>
+</section>
 
     <div id="color-container"></div>
 
@@ -32,15 +31,15 @@ Once you're done, click the Extract button and let the JavaScript do the rest!">
     <script>
     document.onload = document.getElementById('input').value = '';
     
-    var clip = new Clipboard('.color');
+    let clip = new Clipboard('.color');
         
     function getCORS(url, success) {
-    var xhr = new XMLHttpRequest();
-    if (!('withCredentials' in xhr)) xhr = new XDomainRequest();
-    xhr.open('GET', url);
-    xhr.onload = success;
-    xhr.send();
-    return xhr;
+        let xhr = new XMLHttpRequest();
+        if (!('withCredentials' in xhr)) xhr = new XDomainRequest();
+        xhr.open('GET', url);
+        xhr.onload = success;
+        xhr.send();
+        return xhr;
     }
     </script>
 </body>

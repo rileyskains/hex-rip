@@ -14,7 +14,6 @@ article, aside, footer, header, nav, section {
 }
 h1 {
 	font-size: 2em;
-	margin: 0.67em 0;
 }
 figcaption, figure, main {
 	display: block;
@@ -163,35 +162,61 @@ template {
 body {
 	display: inline-block;
 	width: 100%;
-	background-color: #f2f2f2;
+	background-color: #ffffff;
+	margin: 0 auto;
+}
+.hero-area {
+	background: url(../images/hero-faded.png);
+	background-position: center;
+	background-size: cover;
+	height: 425px;
 }
 h1 {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Quicksand', sans-serif;
+	display: block;
 	text-align: center;
+	margin: 0 auto;
+	padding: 0;
+	padding-top: 1em;
 	font-size: 3em;
+	letter-spacing: 8px;
 	color: #212121;
+}
+h2 {
+	font-family: 'Quicksand', sans-serif;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	padding-top: .75em;
+	padding-bottom: .75em;
+	font-size: 1.5em;
+	color: #212121;
+	letter-spacing: 2px;
+}
+.title-purple {
+	color: #C792EA;
 }
 #color-container {
 	width: 100%;
 	display: inline-flex;
 	flex-wrap: wrap;
 	margin: 0 auto;
-	margin-top: 50px;
 	padding: 0;
 }
 #input {
 	display: block;
     width: 650px;
-	height: 175px;
+	height: 100px;
 	margin: 0 auto;
 	padding: 0;
-	border: 4px solid #C792EA;
-	border-radius: 8px;
+	border: 2px solid #C792EA;
 	background-color: #ffffff;
+	padding: 1em;
+	resize: none;
 }
 #input::placeholder {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 1.25em;
+	line-height: 1.4;
 }
 #input:focus,
 #extract-button:focus,
@@ -202,16 +227,21 @@ h1 {
 	display: block;
 	margin: 0 auto;
 	margin-top: 25px;
-	border: 4px solid #ffffff;
-	background-color: #C792EA;
+	margin-bottom: 25px;
+	font-size: 1.5em;
+	font-family: 'Quicksand', sans-serif;
 	color: #ffffff;
-	font-size: 2em;
-	width: 150px;
-	height: 75px;
-	border-radius: 4px;
+	line-height: 1.5;
+	padding: .5em 1.5em;
+	border: none;
+	background: #C792EA;
+	box-shadow: 0 2px 0 0 #a87bc6;
+	border-radius: 6px;
 }
 #extract-button:hover {
 	opacity: .9;
+	transform: translateY(-1px);
+	cursor: pointer;
 }
 #extract-button:active {
 	transform: scale(.97);
@@ -231,6 +261,7 @@ h1 {
 }
 .color:hover {
 	border: 4px dashed #ffffff;
+	cursor: pointer;
 }
 .color:active {
 	transform: scale(1.1);
