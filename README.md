@@ -1,6 +1,11 @@
 # Hex Rip
 A browser-based tool to rip hex color values from any set of text or a URL.
 
+## Types of Input
+1. Normal copy/pasted text or code.
+2. A link to a .css, .js. .json, or some other primarily text file.
+   *Links must be to CORS-enabled resources. If they are not CORS-enabled, the extraction will not run because it cannot access the content.
+
 ## What It Does
 Hex Rip allows even the most novice user to simply and painlessly see all of the hex color values in a set of text, whether pasted in directly or through reading the contents of a CORS-enabled URL that is of the correct type.
 
@@ -26,8 +31,3 @@ After the input has been given, Hex Rip will:
 9. Set the background of the created buttons to their corresponding color.
 10. Place the hex color value inside the button as text.
 11. Adding the buttons to their container.
-
-### Types of Input
-1. Normal copy/pasted text or code.
-2. A link to a .css, .js. .json, or some other primarily text file.
-   *Links must be to CORS-enabled resources. If they are not CORS-enabled, the extraction will not run because it cannot access the content.
