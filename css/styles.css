@@ -266,3 +266,74 @@ h2 {
 .color:active {
 	transform: scale(1.1);
 }
+p {
+	margin: 0;
+}
+#empty-eventually {
+	color: #212121;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 2em;
+	width: 650px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 1em;
+}
+.footer-area {
+	background-color: #C792EA;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+}
+#footer-content {
+	width: 650px;
+	margin: 0 auto;
+}
+.information-icon {
+	display: block;
+	margin: 0 auto;
+	padding: 1em;
+	width: 75px;
+}
+.tip-text, #version {
+	color: #ffffff;
+	text-align: center;
+	font-size: 1.5em;
+	font-family: 'Open Sans', sans-serif;
+	padding-bottom: 1em;
+}
+#footer-header {
+	color: white;
+	padding: 0;
+	font-size: 2em;
+}
+#version {
+	font-size: .9em;
+}
+#website-link {
+	color: #ffffff;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+}
+a {
+	color: #ffffff;
+	padding: 0;
+	margin: 0;
+}
+#please-contribute {
+	color: #ffffff;
+	font-family: 'Open Sans', sans-serif;
+}
+.github-icon {
+	padding: 1em;
+	width: 50px;
+	margin: 0 auto;
+}
+.github-icon:hover,
+#twitter-logo:hover {
+	opacity: .7;
+}
+#twitter-logo {
+	padding: .75em;
+	width: 30px;
+	margin: 0 auto;
+}

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta content="ie=edge" http-equiv="x-ua-compatible">
 	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Hex Rip</title>
+    <title>HexRip</title>
     <link href="css/styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -17,12 +17,28 @@
     <h1><span class="title-purple">Hex</span>Rip</h1>
     <h2>Hex Color Ripper</h2>
 
-    <textarea id="input" placeholder="https://example.com/your-file.css, .js, .json, .html or whatever. Alternatively, just paste the text in here. If URL doesn't work, it isn't supported."></textarea>
+    <textarea id="input" placeholder="https://example.com/your-file.css, .js, .json, or etc. to see and interact with all the hex colors your input contains. Alternatively, just paste the text in here. If URL doesn't work, it isn't supported."></textarea>
 
     <button id="extract-button" onclick="extract()" type="button">Extract</button>
 </section>
 
-    <div id="color-container"></div>
+    <div id="color-container">
+        <p id="empty-eventually">Your extracted colors will appear here!</p>
+    </div>
+
+<section class="footer-area">
+    <div id="footer-content">
+        <img src="images/icon-information.svg" class="information-icon" alt="Information icon.">
+    <p class="tip-text">Click one of the color tiles to copy the hex value to your clipboard.</p>
+
+    <h1 id="footer-header">HexRip</h1>
+    <p id="version">beta-1.0.0</p>
+    <p id="please-contribute">Please feel free to contribute on GitHub and check out some of my other projects. Let's make the web better together!</p>
+    <a href="https://github.com/rileyskains/hex-rip" target="_blank"><img src="images/github.svg" class="github-icon" alt="GitHub logo."></a>
+    <p id="website-link"><a href="https://rileyskains.com/">Riley Skains</a></p>
+    <a href="https://twitter.com/riley_skains" target="_blank"><img src="images/twitter.svg" id="twitter-logo" alt="Twitter logo"></a>
+    </div>
+</section>
 
     <script src="js/purify.min.js"></script>
     <script src="js/tinycolor.js"></script>
