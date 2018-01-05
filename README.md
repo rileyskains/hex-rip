@@ -7,9 +7,6 @@ A browser-based tool to rip hex color values from any set of text or a CORS-enab
 
    **Links must be to [CORS-enabled resources](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS). If they are not CORS-enabled, the extraction will not run because it cannot access the content.
 
-## Usage
-
-
 ## What It Does
 Hex Rip allows even the most novice user to simply and painlessly see all of the hex color values in a set of text, whether pasted in directly or through reading the contents of a CORS-enabled URL that is of the correct type.
 
