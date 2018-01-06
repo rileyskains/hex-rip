@@ -154,8 +154,10 @@ body {
 	width: 100%;
 	margin: 0 auto;
 	padding: 0;
-	background-color: #ffffff;
+	background-color: #C792EA;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
 }
 .hero-area {
 	background: url(../images/hero-faded.png);
@@ -187,6 +189,7 @@ h2 {
 	width: 100%;
 	display: inline-flex;
 	flex-wrap: wrap;
+	background-color: #ffffff;
 }
 #input {
 	display: block;
@@ -252,11 +255,13 @@ h2 {
 p {
 	margin: 0;
 }
-#empty-eventually {
+.none-valid {
 	font-size: 2em;
 	width: 650px;
 	margin: 0 auto;
 	padding: 1em;
+	color: #FF5572;
+	width: 100%;
 }
 .footer-area {
 	background-color: #C792EA;

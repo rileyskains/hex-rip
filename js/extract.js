@@ -12,6 +12,7 @@ function extract() {
     const unique = [...new Set(ripped)];
     const brightness = [];
     const combined = [];
+    const colorContainer = document.getElementById('color-container');
     for (const hexValue in unique) {
         brightness.push(tinycolor(unique[hexValue]).getBrightness());
     }
@@ -34,7 +35,15 @@ function extract() {
         }
         newElement.style.backgroundColor = unique[hexValue];
         newElement.innerHTML = unique[hexValue];
-        document.getElementById('color-container').appendChild(newElement);
+        colorContainer.appendChild(newElement);
     }
-    document.getElementById('empty-eventually').remove();
+    function checkForColors() {
+        if (colorContainer.innerHTML == '' || document.getElementById('input').value.match(/(https:\/\/|http:\/\/|https:|http:|https|http)/gi)) {
+            colorContainer.innerHTML = 
+            `<p class="none-valid" style="padding-bottom: 0">Whoops!</p>
+            <p class="none-valid">Looks like we didn't find any colors! If you used a URL, then it might not work with this tool.</p>`;
+            console.log('yas bitch');
+        }
+    }
+    setTimeout(checkForColors, 1000);
 }
