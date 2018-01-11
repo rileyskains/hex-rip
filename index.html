@@ -29,15 +29,15 @@
 			<p id="website-link"><a href="https://rileyskains.com/">Riley Skains</a></p><a href="https://twitter.com/riley_skains" target="_blank"><img alt="Twitter logo" id="twitter-logo" src="images/twitter.svg"></a>
 		</div>
 	</section>
-	<script src="js/purify.min.js"></script> 
-	<script src="js/tinycolor.js"></script> 
-	<script src="js/extract.js"></script> 
-	<script src="js/clipboard.js"></script> 
+	<script src="js/purify.min.js"></script>
+	<script src="js/tinycolor.js"></script>
+	<script src="js/extract.js"></script>
+	<script src="js/clipboard.js"></script>
 	<script>
 	   document.onload = document.getElementById('input').value = '';
-	   
+
 	   let clip = new Clipboard('.color');
-	       
+
 	   function getCORS(url, success) {
 	       let xhr = new XMLHttpRequest();
 	       if (!('withCredentials' in xhr)) xhr = new XDomainRequest();

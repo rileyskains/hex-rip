@@ -27,7 +27,7 @@ function extract() {
     for (const hexValue in unique) {
         const newElement = document.createElement('button');
         newElement.id = unique[hexValue];
-        newElement.className = 'color'; 
+        newElement.className = 'color';
         newElement.setAttribute('data-clipboard-text', unique[hexValue]);
         newElement.setAttribute('title', `Copy ${unique[hexValue]} to clipboard`);
         if (tinycolor(unique[hexValue]).isDark()) {
@@ -39,7 +39,7 @@ function extract() {
     }
     function checkForColors() {
         if (colorContainer.innerHTML == '') {
-            colorContainer.innerHTML = 
+            colorContainer.innerHTML =
             `<p class="none-valid" style="padding-bottom: 0">Whoops!</p>
             <p class="none-valid">Looks like we didn't find any colors! If you used a URL, then it might not work with this tool.</p>`;
         }
