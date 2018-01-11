@@ -38,11 +38,10 @@ function extract() {
         colorContainer.appendChild(newElement);
     }
     function checkForColors() {
-        if (colorContainer.innerHTML == '' || document.getElementById('input').value.match(/(https:\/\/|http:\/\/|https:|http:|https|http)/gi)) {
+        if (colorContainer.innerHTML == '') {
             colorContainer.innerHTML = 
             `<p class="none-valid" style="padding-bottom: 0">Whoops!</p>
             <p class="none-valid">Looks like we didn't find any colors! If you used a URL, then it might not work with this tool.</p>`;
-            console.log('yas bitch');
         }
     }
     setTimeout(checkForColors, 1000);

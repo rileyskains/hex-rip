@@ -165,7 +165,7 @@ body {
 	background-size: cover;
 	height: 425px;
 }
-h1, h2, .color, #empty-eventually {
+h1, h2, .color {
 	color: #212121;
 }
 h1, h2, #extract-button {
@@ -204,7 +204,7 @@ h2 {
 #input::placeholder {
 	line-height: 1.4;
 }
-#input::placeholder, .color, #empty-eventually,
+#input::placeholder, .color, #color-container,
 .tip-text, #version, #website-link, #please-contribute {
 	font-family: 'Open Sans', sans-serif;
 }
