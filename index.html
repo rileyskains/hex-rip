@@ -13,10 +13,38 @@
 	<link href="images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
 </head>
 <body>
-	<section class="hero-area">
+	<section class="hero-area" id="hero">
 		<h1><span class="title-purple">Hex</span>Rip</h1>
 		<h2>Hex Color Ripper</h2>
-		<textarea id="input" placeholder="https://example.com/your-file.css, .js, .json, or etc. to see and interact with all the hex colors your input contains. Alternatively, just paste the text in here. If URL doesn't work, it isn't supported."></textarea> <button id="extract-button" onclick="extract()" type="button">Extract</button>
+		<div id="radio-wrapper">
+			<div class="fresh-input-wrapper">
+				<input type="radio" id="fresh-input" name="input-type" onclick="displayFresh()" checked>
+				<label for="fresh-input">Fresh Input</label>
+			</div>
+			<div class="previous-input-wrapper">
+				<input type="radio" id="previous-input"  name="input-type"  onclick="displaySaved()">
+				<label for="previous-input">Saved Colors</label>
+			</div>
+		</div>
+		<textarea id="input" placeholder="https://example.com/your-file.css, .js, .json, or etc. to see and interact with all the hex colors your input contains. Alternatively, just paste the text in here. If URL doesn't work, it isn't supported."></textarea>
+
+		<div id="palette-key-area"></div>
+		
+		<div id="new-question">
+			<p>Would you like to save these colors for later?</p>
+			<button id="yes-save" onclick="saveColors()">Yes, please!</button>
+			<button id="do-not-save" onclick="clearArea()">No, thank you.</button>
+		</div>
+		<button id="clear-button" onclick="clearSaved()" type="button">Clear</button>
+		<div id="follow-up">
+			<p>What would you like to name this set of colors?</p>
+			<input type="text" id="name-input">
+			<br>
+			<button onclick="saveThem()" id="save-button">Save</button>
+		</div>
+
+
+		<button id="extract-button" onclick="extract()" type="button">Extract</button>
 	</section>
 	<div id="color-container"></div>
 	<section class="footer-area">
@@ -24,7 +52,7 @@
 			<img alt="Information icon." class="information-icon" src="images/icon-information.svg">
 			<p class="tip-text">Click one of the color tiles to copy the hex value to your clipboard.</p>
 			<h1 id="footer-header">HexRip</h1>
-			<p id="version">beta-1.0.2</p>
+			<p id="version">beta-1.1.0</p>
 			<p id="please-contribute">Please feel free to contribute on GitHub and check out some of my other projects. Let's make the web better together!</p><a href="https://github.com/rileyskains/hex-rip" target="_blank"><img alt="GitHub logo." class="github-icon" src="images/github.svg"></a>
 			<p id="website-link"><a href="https://rileyskains.com/">Riley Skains</a></p><a href="https://twitter.com/riley_skains" target="_blank"><img alt="Twitter logo" id="twitter-logo" src="images/twitter.svg"></a>
 		</div>
