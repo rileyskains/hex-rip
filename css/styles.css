@@ -163,7 +163,6 @@ body {
 	background: url(../images/hero-faded.png);
 	background-position: center;
 	background-size: cover;
-	/* height: 450px; */
 }
 h1, h2, .color {
 	color: #212121;
@@ -202,7 +201,7 @@ label, input {
 	padding: .5em;
 	font-size: 1em;
 }
-#input {
+#input, #palette-key-area {
 	display: block;
 	width: 650px;
 	height: 100px;
@@ -216,21 +215,19 @@ label, input {
 	line-height: 1.4;
 }
 #input::placeholder, .color, #color-container,
-.tip-text, #version, #website-link, #please-contribute {
+.tip-text, #version, #website-link, #please-contribute,
+#new-question, #follow-up, #yes-save, #do-not-save,
+#save-button {
 	font-family: 'Open Sans', sans-serif;
 }
-#input:focus, #extract-button:focus, #clear-button:focus, #name-input:focus, .color:focus {
+#input:focus, #extract-button:focus, #clear-button:focus,
+#name-input:focus, .color:focus {
 	outline: none;
 }
 #palette-key-area {
 	display: none;
-	width: 650px;
 	min-height: 100px;
-	margin: 0 auto;
 	margin-bottom: 25px;
-	padding: 1em;
-	background-color: #ffffff;
-	border: 2px solid #c792ea;
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
@@ -282,7 +279,6 @@ label, input {
 	margin-top: 30px;
 	margin-bottom: 30px;
 	padding: 1em;
-	font-family: 'Open Sans', sans-serif;
 	font-size: 1.25em;
 	color: #212121;
 	background-color: rgba(255,255,255,.5);
@@ -294,7 +290,6 @@ label, input {
 	padding: .5em;
 	border: none;
 	border-radius: 4px;
-	font-family: 'Open Sans', sans-serif;
 }
 #yes-save {
 	background-color: #B5FF84;
@@ -318,13 +313,12 @@ label, input {
 	padding: .5em;
 	border: none;
 	border-radius: 4px;
-	font-family: 'Open Sans', sans-serif;
 	background-color: #64B5F6;
 	box-shadow: 0 2px 0 0 #2696f2;
-	color: #ffffff;
 }
 .tip-text, #version,
-#website-link, a, #please-contribute {
+#website-link, a, #please-contribute,
+#save-button {
 	color: #ffffff;
 }
 #extract-button:hover, #clear-button:hover, #yes-save:hover, #do-not-save:hover {

@@ -27,24 +27,20 @@
 			</div>
 		</div>
 		<textarea id="input" placeholder="https://example.com/your-file.css, .js, .json, or etc. to see and interact with all the hex colors your input contains. Alternatively, just paste the text in here. If URL doesn't work, it isn't supported."></textarea>
-
 		<div id="palette-key-area"></div>
-		
 		<div id="new-question">
 			<p>Would you like to save these colors for later?</p>
-			<button id="yes-save" onclick="saveColors()">Yes, please!</button>
-			<button id="do-not-save" onclick="clearArea()">No, thank you.</button>
+				<button id="yes-save" onclick="saveColors()">Yes, please!</button>
+				<button id="do-not-save" onclick="clearArea()">No, thank you.</button>
 		</div>
-		<button id="clear-button" onclick="clearSaved()" type="button">Clear</button>
 		<div id="follow-up">
 			<p>What would you like to name this set of colors?</p>
-			<input type="text" id="name-input">
-			<br>
-			<button onclick="saveThem()" id="save-button">Save</button>
+				<input type="text" id="name-input">
+					<br>
+				<button onclick="saveThem()" id="save-button">Save</button>
 		</div>
-
-
 		<button id="extract-button" onclick="extract()" type="button">Extract</button>
+		<button id="clear-button" onclick="clearSaved()" type="button">Clear</button>
 	</section>
 	<div id="color-container"></div>
 	<section class="footer-area">
