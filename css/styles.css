@@ -201,7 +201,7 @@ label, input {
 	padding: .5em;
 	font-size: 1em;
 }
-#input, #palette-key-area {
+#input, #saved-palettes-container {
 	display: block;
 	width: 650px;
 	height: 100px;
@@ -216,7 +216,7 @@ label, input {
 }
 #input::placeholder, .color, #color-container,
 .tip-text, #version, #website-link, #please-contribute,
-#new-question, #follow-up, #yes-save, #do-not-save,
+#want-to-save, #naming-prompt, #yes-save, #do-not-save,
 #save-button {
 	font-family: 'Open Sans', sans-serif;
 }
@@ -224,7 +224,7 @@ label, input {
 #name-input:focus, .color:focus {
 	outline: none;
 }
-#palette-key-area {
+#saved-palettes-container {
 	display: none;
 	min-height: 100px;
 	margin-bottom: 25px;
@@ -244,7 +244,7 @@ label, input {
 .indiv-key:hover {
 	opacity: .9;
 }
-#new-question {
+#want-to-save {
 	display: none;
 }
 #extract-button {
@@ -273,7 +273,7 @@ label, input {
 	box-shadow: 0 2px 0 0 #d7425b;
 	border-radius: 6px;
 }
-#new-question, #follow-up {
+#want-to-save, #naming-prompt {
 	display: none;
 	margin: 0 auto;
 	margin-top: 30px;
@@ -299,7 +299,7 @@ label, input {
 	background-color: #ff5572;
 	box-shadow: 0 2px 0 0 #d7425b;
 }
-#follow-up {
+#naming-prompt {
 	display: none;
 }
 #name-input {
@@ -394,7 +394,8 @@ p {
 	width: 30px;
 }
 @media screen and (max-width: 700px) {
-	#input, #radio-wrapper, #palette-key-area, #footer-content {
+	#input, #radio-wrapper, #saved-palettes-container, #footer-content,
+	#want-to-save, #naming-prompt {
 		width: 85%;
 	}
 	.color {

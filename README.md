@@ -1,5 +1,5 @@
 # Hex Rip
-### beta 1.1.0
+### beta 1.1.1
 A browser-based tool to rip hex color values from any set of text or a CORS-enabled URL.
 
 ## Types of Input
