@@ -3,6 +3,7 @@ const primaryInput = document.getElementById('input');
 const savedPalettesContainer = document.getElementById('saved-palettes-container');
 const wantToSave = document.getElementById('want-to-save');
 const namingPrompt = document.getElementById('naming-prompt');
+const nameInput = document.getElementById('name-input');
 const extractButton = document.getElementById('extract-button');
 const clearButton = document.getElementById('clear-button');
 const hero = document.getElementById('hero');
@@ -75,6 +76,7 @@ function requestToSave() {
 function saveColors() {
     hide(wantToSave);
     show(namingPrompt);
+    nameInput.focus();
     document.getElementById('previous-input').checked = true;
     displaySaved();
     hide(clearButton);
