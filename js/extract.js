@@ -6,6 +6,8 @@ const namingPrompt = document.getElementById('naming-prompt');
 const nameInput = document.getElementById('name-input');
 const extractButton = document.getElementById('extract-button');
 const clearButton = document.getElementById('clear-button');
+const areYouSure = document.getElementById('are-you-sure');
+const areYouSureContainer = document.getElementById('are-you-sure-container');
 const hero = document.getElementById('hero');
 const colorContainer = document.getElementById('color-container');
 let usefulBoolean = true;
@@ -116,9 +118,19 @@ function displaySaved() {
         return;
     }
 }
+function certaintyChecker() {
+    show(areYouSureContainer);
+    show(areYouSure);
+}
 function clearSaved() {
+    hide(areYouSureContainer);
+    hide(areYouSure);
     localStorage.clear();
     savedPalettesContainer.innerHTML = '';
+}
+function goBack() {
+    hide(areYouSureContainer);
+    hide(areYouSure);
 }
 function getSavedPaletteNames() {
     usefulBoolean = false;

@@ -40,7 +40,16 @@
 				<button onclick="saveThem()" id="save-button">Save</button>
 		</div>
 		<button id="extract-button" onclick="extract()" type="button">Extract</button>
-		<button id="clear-button" onclick="clearSaved()" type="button">Clear</button>
+		<button id="clear-button" onclick="certaintyChecker()" type="button">Clear</button>
+		<div id="are-you-sure-container">
+			<div id="are-you-sure">
+				<p>Are you sure you want to delete all of your saved palettes?</p>
+				<br>
+				<p>This action can't be undone.</p>
+					<button id="im-sure" onclick="clearSaved()">Yes! Delete them all!</button>
+					<button id="wait-stop" onclick="goBack()">No! Take me back!</button>
+			</div>
+		</div>
 	</section>
 	<div id="color-container"></div>
 	<section class="footer-area">
@@ -48,7 +57,7 @@
 			<img alt="Information icon." class="information-icon" src="images/icon-information.svg">
 			<p class="tip-text">Click one of the color tiles to copy the hex value to your clipboard.</p>
 			<h1 id="footer-header">HexRip</h1>
-			<p id="version">beta-1.1.1</p>
+			<p id="version">beta-1.1.2</p>
 			<p id="please-contribute">Please feel free to contribute on GitHub and check out some of my other projects. Let's make the web better together!</p><a href="https://github.com/rileyskains/hex-rip" target="_blank"><img alt="GitHub logo." class="github-icon" src="images/github.svg"></a>
 			<p id="website-link"><a href="https://rileyskains.com/">Riley Skains</a></p><a href="https://twitter.com/riley_skains" target="_blank"><img alt="Twitter logo" id="twitter-logo" src="images/twitter.svg"></a>
 		</div>

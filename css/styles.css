@@ -217,7 +217,7 @@ label, input {
 #input::placeholder, .color, #color-container,
 .tip-text, #version, #website-link, #please-contribute,
 #want-to-save, #naming-prompt, #yes-save, #do-not-save,
-#save-button {
+#save-button, #are-you-sure, #im-sure, #wait-stop {
 	font-family: 'Open Sans', sans-serif;
 }
 #input:focus, #extract-button:focus, #clear-button:focus,
@@ -273,7 +273,7 @@ label, input {
 	box-shadow: 0 2px 0 0 #d7425b;
 	border-radius: 6px;
 }
-#want-to-save, #naming-prompt {
+#want-to-save, #naming-prompt, #are-you-sure {
 	display: none;
 	margin: 0 auto;
 	margin-top: 30px;
@@ -285,7 +285,27 @@ label, input {
 	width: 500px;
 	border-radius: 6px;
 }
-#yes-save, #do-not-save {
+#are-you-sure-container {
+	display: none;
+	position: fixed;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.7);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#are-you-sure {
+	display: none;
+	position: fixed;
+	margin: 0;
+	background-color: #ffffff;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#yes-save, #do-not-save, #im-sure, #wait-stop {
 	margin: 1em;
 	padding: .5em;
 	border: none;
@@ -295,9 +315,14 @@ label, input {
 	background-color: #B5FF84;
 	box-shadow: 0 2px 0 0 #98e963;
 }
-#do-not-save {
+#do-not-save, #im-sure {
 	background-color: #ff5572;
 	box-shadow: 0 2px 0 0 #d7425b;
+	color: #ffffff;
+}
+#wait-stop {
+	background-color: #ffefaf;
+	box-shadow: 0 2px 0 0 #f7d651;
 }
 #naming-prompt {
 	display: none;
@@ -321,7 +346,8 @@ label, input {
 #save-button {
 	color: #ffffff;
 }
-#extract-button:hover, #clear-button:hover, #yes-save:hover, #do-not-save:hover {
+#extract-button:hover, #clear-button:hover, #yes-save:hover, #do-not-save:hover,
+#im-sure:hover, #wait-stop:hover {
 	opacity: .9;
 	transform: translateY(-1px);
 	cursor: pointer;
@@ -395,7 +421,7 @@ p {
 }
 @media screen and (max-width: 700px) {
 	#input, #radio-wrapper, #saved-palettes-container, #footer-content,
-	#want-to-save, #naming-prompt {
+	#want-to-save, #naming-prompt, #are-you-sure {
 		width: 85%;
 	}
 	.color {
